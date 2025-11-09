@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trúc Linh Quán</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="./img/logo.png" alt="Restaurant Logo" id="logo-img">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#introduction">Giới Thiệu</a></li>
+                <li><a href="#menu">Thực Đơn</a></li>
+                <li><a href="#space">Không Gian</a></li>
+                <li><a href="#reviews">Đánh Giá</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+            <div class="search-box">
+                <button type="button" id="search-icon-btn" class="search-icon-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" placeholder="Search..." id="search-input">
+                <button type="button" id="search-btn" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                <button type="button" id="search-close-btn" aria-label="Close search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Image Slider Section -->
+        <section class="slider-section">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="./img/1.jpg" alt="Restaurant Interior">
+
+                </div>
+                <div class="slide">
+                    <img src="./img/2.jpg" alt="Delicious Food">
+                    
+                </div>
+                <div class="slide">
+                    <img src="./img/3.jpg" alt="Cozy Dining">
+                    
+                </div>
+                <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section introduction-section">
+            <div class="container">
+                <div class="intro-content">
+                    <h2 class="intro-heading">Về Chúng Tôi</h2>
+                    <div class="intro-text">
+                        <h3>Trúc Linh - Xin Chào Quý Khách</h3>
+                        <p><b style="font-weight: 500;">Ngon Từ Chất - Thật Từ Tâm</b></p>
+                        <p>Tại <b>Trúc Linh</b>, chúng tôi tin rằng ẩm thực đồng quê không chỉ là món ăn, mà còn là hơi thở của quê hương – nơi lưu giữ hương vị mộc mạc và chân thành nhất.</p>
+                        <p>Suốt hơn 15 năm kể từ khi thành lập vào năm 2009, Trúc Linh luôn tự hào mang đến cho thực khách những món lẩu cua đồng và đặc sản đồng quê được chế biến từ nguồn nguyên liệu tươi ngon, sạch sẽ và đảm bảo chất lượng.</p>
+                        <p>Không gian của  <b>Trúc Linh</b> là sự kết hợp hài hòa giữa tự nhiên và sự ấm cúng – bên trong rộng rãi, thoáng mát; bên ngoài là hồ cá và hàng trúc xanh gợi cảm giác yên bình, thân thuộc.</p>
+                        <!-- <ul class="intro-features">
+                            <li><i class="fas fa-check-circle"></i> Fresh local ingredients</li>
+                            <li><i class="fas fa-check-circle"></i> Traditional recipes</li>
+                            <li><i class="fas fa-check-circle"></i> Warm, welcoming atmosphere</li>
+                            <li><i class="fas fa-check-circle"></i> Family-friendly environment</li>
+                        </ul> -->
+                    </div>
+                    <div class="intro-image">
+                        <div class="intro-image-carousel">
+                            <div class="intro-slide active">
+                                <img src="./img/intro.jpg" alt="Restaurant Interior">
+                            </div>
+                            <div class="intro-slide">
+                                <img src="./img/intro1.jpg" alt="Dining Area">
+                            </div>
+                            <div class="intro-slide">
+                                <img src="./img/intro2.jpg" alt="Restaurant Space">
+                            </div>
+                        </div>
+                        <div class="intro-dots">
+                            <span class="intro-dot active" onclick="currentIntroSlide(1)"></span>
+                            <span class="intro-dot" onclick="currentIntroSlide(2)"></span>
+                            <span class="intro-dot" onclick="currentIntroSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="section menu-section">
+            <div class="container">
+                <h2 class="section-title">Thực Đơn Nhà Hàng</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="./img/menu1.jpg" alt="Menu Item 1">
+                    </div>
+                    <div class="menu-item">
+                        <img src="./img/menu2.jpg" alt="Menu Item 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Space/Design Section -->
+        <section id="space" class="section space-section">
+            <div class="container">
+                <h2 class="section-title">Không Gian Quán</h2>
+                <p class="section-subtitle" style="font-weight: 600;">Ấm cúng và gần gũi thiên nhiên</p>
+                <div class="space-collage">
+                    <div class="collage-item collage-item-large">
+                        <img src="./img/space1.jpg" alt="Main Dining Area">
+                        <div class="gallery-overlay">
+                            <p>Không Gian Bên Ngoài</p>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="./img/space2.jpg" alt="Private Dining">
+                        <div class="gallery-overlay">
+                            <p>Không Gian Bên Trong</p>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="./img/space3.jpg" alt="Outdoor Seating">
+                        <div class="gallery-overlay">
+                            <p>Chòi uống nước</p>
+                        </div>
+                    </div>
+                    <div class="collage-item collage-item-wide">
+                        <img src="./img/space4.jpg" alt="Bar Area">
+                        <div class="gallery-overlay">
+                            <p>Hồ Cá Cực Chill</p>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="./img/space5.jpg" alt="Kitchen View">
+                        <div class="gallery-overlay">
+                            <p>Thoáng Đãng Sạch Sẽ</p>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="./img/space6.png" alt="Event Space">
+                        <div class="gallery-overlay">
+                            <p>Thưởng Thức Khung Cảnh</p>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="./img/space7.jpg" alt="Event Space">
+                        <div class="gallery-overlay">
+                            <p>Góc Sống Ảo</p>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="./img/space8.jpg" alt="Event Space">
+                        <div class="gallery-overlay">
+                            <p>Bình Yên Nơi Làng Quê</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="section reviews-section">
+            <div class="container">
+                <h2 class="section-title">Cảm Nhận Của Khách Hàng</h2>
+            </div>
+            <div class="reviews-slider-container">
+                <div class="reviews-slider">
+                    <div class="review-slide active">
+                        <div class="review-content">
+                            <div class="review-avatar-circle">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjV8gPyIPMRmtYAOJXtbvlPWMvfny2GibXfgQsRPcgCrKQC0iwil=w72-h72-p-rp-mo-ba4-br100" alt="">
+                            </div>
+                            <p class="review-text">"Một nơi rất đáng để bạn đến và trải nghiệm các món ăn đồng quê xứ Đoài, đặc biệt là lẩu cua đồng. Sẽ tiếp tục đến ăn trong các dịp liên hoan tới. Cảm ơn chủ nhà hàng làm món rất có tâm!"</p>
+                            <h4 class="review-name">Thế Cường Nguyễn</h4>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-avatar-circle">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWke6O4_kxYwJnWRtjfaUfaKkKvh_tw2Ag06tveMCHpqSl2PzE1=w72-h72-p-rp-mo-ba4-br100" alt="">
+                            </div>
+                            <p class="review-text">"Không gian ổn, đồ ăn ngon, tuy hơi xa nhưng bù lại yên tĩnh và không khí trong lành."</p>
+                            <h4 class="review-name">Nguyen Minh</h4>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-avatar-circle">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjU0gFeeFWUgX7wzqa9shcxWNxe1L8faPukk6kMxwvBLG2bWgh7rog=w72-h72-p-rp-mo-ba5-br100" alt="">
+                            </div>
+                            <p class="review-text">"Một nơi rất đáng để bạn đến và trải nghiệm các món ăn đồng quê xứ Đoài, đặc biệt là lẩu cua đồng. Sẽ tiếp tục đến ăn trong các dịp liên hoan tới. Cảm ơn chủ nhà hàng làm những món rất có tâm!"</p>
+                            <h4 class="review-name">Hong Quan</h4>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-avatar-circle">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWSteWeiLmgpF5FoWyIs2jux2uLuotRTfyNsXuTLPg5e27c2jui=w72-h72-p-rp-mo-ba5-br100" alt="">
+                            </div>
+                            <p class="review-text">"Ngon bổ rẻ. Có tôm sông và cua đồng rán giòn ăn kèm với lẩu khá độc đáo. Không gian thoáng mát, yên tĩnh."</p>
+                            <h4 class="review-name">Độc Lạ Hà Nội</h4>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-avatar-circle">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXVzCWJOVF4MWN2FNfGNPySs4XEGKBuW6jzoJDOvDOK0x26gHY=w72-h72-p-rp-mo-ba3-br100" alt="">
+                            </div>
+                            <p class="review-text">"Đồ ăn của quán rất ngon. Nước lẩu ngọt, nhiều gạch cua. Hai món cua đồng rang và tôm chiên ăn rất ngon. Ăn xong còn có chè lam ăn tráng miệng. Chủ quán rất nhiệt tình. Sẽ còn ủng hộ quán nhiều lần sau"</p>
+                            <h4 class="review-name">Tiến Dũng Phạm</h4>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-avatar-circle">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVQB14Gq0HQ_xm9iAFY5ItbFp-_f6qcVQN6xPkXFZoPbRaRCng=w72-h72-p-rp-mo-br100" alt="">
+                            </div>
+                            <p class="review-text">"Không gian quán sạch, đẹp, thư thái. Bàn lẩu có sẵn nồi âm trên mặt bàn nên nồi lẩu thấp, dùng tiện. Các món ăn hương vị ok, so với giá là rẻ. Ăn xong có tráng miệng trà, chè lam thơm miệng nha. Có loa đài hát hò nữa nha."</p>
+                            <h4 class="review-name">Hong Bui</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev-review-btn" onclick="changeReview(-1)">&#10094;</button>
+                <button class="slider-btn next-review-btn" onclick="changeReview(1)">&#10095;</button>
+                <div class="slider-dots review-dots-container">
+                    <span class="dot review-dot active" onclick="currentReview(1)"></span>
+                    <span class="dot review-dot" onclick="currentReview(2)"></span>
+                    <span class="dot review-dot" onclick="currentReview(3)"></span>
+                    <span class="dot review-dot" onclick="currentReview(4)"></span>
+                    <span class="dot review-dot" onclick="currentReview(5)"></span>
+                    <span class="dot review-dot" onclick="currentReview(6)"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button type="button" class="lightbox-close" aria-label="Close image">&times;</button>
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <p><i class="fas fa-phone"></i> Hotline: <a href="tel:+1234567890"> 0988 041 229</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@countryrestaurant.com">info@countryrestaurant.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: Số 1, Đường Đồng Kho, Đồng Trúc, Thạch Thất, HN </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Giờ Mở Cửa</h3>
+                    <p><strong>Cả Tuần:</strong> 8:00 AM - 10:00 PM</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Mạng Xã Hội</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61565582720315" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://zalo.me/0988041229" target="_blank" aria-label="Zalo">
+                            <i class="fas fa-comments"></i>
+                            <span>Zalo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trúc Linh Quán Cua Đồng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
