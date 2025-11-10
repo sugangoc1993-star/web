@@ -279,7 +279,7 @@ nav.container {
 
 /* Introduction Section */
 .introduction-section {
-    background-image: url(./img/background2.jpg);
+    background-image: url(background2.jpg);
 }
 
 .intro-content {
@@ -396,7 +396,7 @@ nav.container {
 
 /* Menu Section */
 .menu-section {
-    background-image: url(./img/background1.jpg);
+    background-image: url(background1.jpg);
 }
 
 .menu-grid {
@@ -493,7 +493,7 @@ body.no-scroll {
 
 /* Space Section */
 .space-section {
-    background-image: url(./img/background2.jpg);
+    background-image: url(background2.jpg);
 }
 
 .space-collage {
@@ -556,7 +556,7 @@ body.no-scroll {
 
 /* Reviews Section */
 .reviews-section {
-    background-image: url(./img/background1.jpg);
+    background-image: url(background1.jpg);
     padding-bottom: 0;
 }
 
@@ -564,7 +564,7 @@ body.no-scroll {
     position: relative;
     width: 100%;
     min-height: 400px;
-    background-image: url(./img/background1.jpg);
+    background-image: url(background1.jpg);
     padding: 4rem 0;
     margin-top: 2rem;
 }
@@ -1056,3 +1056,4 @@ footer {
         font-size: 1.1rem;
     }
 }
+
